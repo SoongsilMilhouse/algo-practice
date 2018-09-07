@@ -16,7 +16,9 @@ public class Brackets2 {
                 if(brackets[j].equals("(") || brackets[j].equals("{") || brackets[j].equals("[")) {
                     stack.push(brackets[j]);
                 } else {
-                    if((brackets[j].equals(")") && stack.peek().equals("(")) || (brackets[j].equals("}") && stack.peek().equals("{")) || (brackets[j].equals("]") && stack.peek().equals("[")) )
+                    if((brackets[j].equals(")") && stack.peek().equals("(")) 
+                    || (brackets[j].equals("}") && stack.peek().equals("{")) 
+                    || (brackets[j].equals("]") && stack.peek().equals("[")) )
                         stack.pop();
                     else
                         stack.push(brackets[j]);
