@@ -13,7 +13,8 @@ public class Brackets2 {
             String[] brackets = sc.next().split("");
 
             for(int j = 0; j < brackets.length; j++) {
-                if(brackets[j].equals("(") || brackets[j].equals("{") || brackets[j].equals("[")) {
+                if(stack.isEmpty()) stack.push(brackets[j]);
+                else if(brackets[j].equals("(") || brackets[j].equals("{") || brackets[j].equals("[")) {
                     stack.push(brackets[j]);
                 } else {
                     if((brackets[j].equals(")") && stack.peek().equals("(")) 
