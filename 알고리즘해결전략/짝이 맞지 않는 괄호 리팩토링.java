@@ -1,4 +1,4 @@
-﻿import java.util.Scanner;
+import java.util.Scanner;
 import java.util.Stack;
 
 public class Brackets2_refactored_2 {
