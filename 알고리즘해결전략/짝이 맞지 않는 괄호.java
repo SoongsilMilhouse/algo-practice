@@ -19,7 +19,7 @@ public class Brackets2 {
                 } else {
                     if((brackets[j].equals(")") && stack.peek().equals("(")) 
                     || (brackets[j].equals("}") && stack.peek().equals("{")) 
-                    || (brackets[j].equals("]") && stack.peek().equals("[")) )
+                    || (brackets[j].equals("]") && stack.peek().equals("[")))
                         stack.pop();
                     else
                         stack.push(brackets[j]);
