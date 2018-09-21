@@ -16,7 +16,7 @@ public class NerdOrNot {
 
             for (int j = 0; j < numberOfParticipants; j++) {
                 nerdDataList.add(new NerdData(sc.nextInt(), sc.nextInt()));
-                if(checkBeforeParticipants(nerdDataList.get(j))) {
+                if(!isNerd(nerdDataList.get(j))) {
                     j--;
                 }
                 result += nerdDataList.size();
@@ -25,16 +25,16 @@ public class NerdOrNot {
         }
     }
 
-    static boolean checkBeforeParticipants(NerdData nerdData) {
+    static boolean isNerd(NerdData nerdData) {
         for (int i = 0; i < nerdDataList.size(); i++) {
             if (nerdDataList.get(i).numberOfQuestions < nerdData.numberOfQuestions
                     && nerdDataList.get(i).numberOfNoodleBowels < nerdData.numberOfNoodleBowels) {
                 nerdDataList.remove(i);
                 numberOfParticipants--;
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
 
